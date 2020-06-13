@@ -1,8 +1,5 @@
 module Lambda where
 
-
-type Var = String
-
-data Expr = Var
-          | Lambda Var Expr
+data Expr = Var Char
+          | Lambda Char Expr
           | Apply Expr Expr

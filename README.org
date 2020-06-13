@@ -2,10 +2,11 @@
 Lambda calculus (maybe simply typed)
 
 * Grammar
-  https://opendsa-server.cs.vt.edu/ODSA/Books/PL/html/Syntax.html
-  Formally, the lambda caluclus can be described by the following BNF grammar:
+** Syntax for Lambda Terms
+   http://pages.cs.wisc.edu/~aws/courses/cs704-asn/asn1
   #+begin_src 
-  expr = var
-       | lambda var . expr
-       | (expr expr)
+  <term> ::= <term> <term>
+           | \ <var> . <term>
+           | ( <term> )
+           | <var>
   #+end_src
