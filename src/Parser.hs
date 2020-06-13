@@ -13,7 +13,7 @@ init_parser = do
 if' :: Bool -> a -> a -> a
 if' b x y = if b then x else y
 
-expression :: ReadP Expression
+expression :: ReadP Expr
 expression = var +++ lambda +++ apply
 
 var :: ReadP String -- TODO change to ReadP Expr
