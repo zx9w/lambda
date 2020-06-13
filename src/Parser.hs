@@ -13,7 +13,7 @@ init_parser = do
 if' :: Bool -> a -> a -> a
 if' b x y = if b then x else y
 
-expression :: ReadP Expression
+expression :: ReadP Expr
 expression = var +++ lambda +++ apply
 
 var :: ReadP String -- TODO change to ReadP Expr
@@ -27,3 +27,11 @@ apply = do
   e <- expression
   char ')'
   return e
+
+lambda :: ReadP Expr
+lambda = do
+  char '\\' -- backslash stands for lambda"  v <- variable
+  e0 <- expression
+  char '.'
+  e1 <- expression
+  return $ Apply e0 e1
