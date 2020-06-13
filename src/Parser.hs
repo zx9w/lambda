@@ -15,4 +15,4 @@ if' b x y = if b then x else y
 var :: ReadP String
 var = many alphaNum
   where
-  alphaNum = satisfy isLetter +++ satisfy isNumber
+    alphaNum = satisfy isLetter +++ satisfy isNumber
