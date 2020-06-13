@@ -14,10 +14,7 @@ instance Show Nat where
 data Expr = Var Nat
           | Lambda Nat Expr
           | Apply Expr Expr
-<<<<<<< HEAD
           deriving Show
-=======
-
 
 fix :: Nat -> Expr -> Expr -> Expr
 fix n expr input = case expr of
@@ -28,4 +25,3 @@ fix n expr input = case expr of
 beta :: Expr -> Expr
 beta expr = case expr of
   (Apply (Lambda x e) v) -> fix x e v
->>>>>>> bc794d03f8acaf53dc9529a55f8d6c4811537e26
