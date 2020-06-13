@@ -9,3 +9,11 @@ Lambda calculus (maybe simply typed)
        | lambda var . expr
        | (expr expr)
   #+end_src
+
+* De Brujin Indices
+
+Start enumerating bindings at the outermost scope.
+
+When new variables are bound in the inner scopes then the largest binding in scope gets incremented.
+
+This produces the variable names at each level.
