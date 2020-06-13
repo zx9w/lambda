@@ -1,7 +1,7 @@
 module Parser where
 
 import System.Environment (getArgs)
-import ReadP
+import Text.ParserCombinators.ReadP
 import Data.Char(isLetter, isNumber)
 import Lambda
 
