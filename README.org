@@ -1,5 +1,20 @@
-* lambda
+* Lambda
 Lambda calculus (maybe simply typed)
+
+** Alpha-conversion
+\x.f(x) = \y.f(y)
+
+Rename variables. Can be used to de-brujin encode.
+
+** Beta-conversion
+(\x.f(x))(T) = f(T)
+
+This is the reduction that is computational in nature.
+
+** Eta-conversion
+\x.F(x) = F
+
+Remove redundant lambdas.
 
 * Grammar
   https://opendsa-server.cs.vt.edu/ODSA/Books/PL/html/Syntax.html
